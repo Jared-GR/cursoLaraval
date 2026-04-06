@@ -15,7 +15,7 @@
     @else
         <ul>
             @forelse ($users as $user)
-                <li>{{ $user->name }}</li>
+                <li>{{ $user->name }} -- {{ $user->age }}yo</li>
             @empty
                 <li>List empty</li>
             @endforelse

@@ -11,8 +11,9 @@ class UserController extends Controller
 {
     public function index()
     {
-        // $users = User::where('age','>',20)->get();
-        return view('user.index', compact('users'));
+        $users = DB::raw("SELECT * FROM users;");
+        echo $users;
+        // return view('user.index', compact('users'));
     }
 
     public function create()
